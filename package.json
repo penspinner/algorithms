@@ -1,0 +1,17 @@
+{
+	"name": "algorithms",
+	"version": "1.0.0",
+	"description": "",
+	"main": "",
+	"scripts": {
+		"format": "prettier './**/*.{tsx,ts,json,jsx,js,mjs}' --write",
+		"test": "vitest"
+	},
+	"author": "Steven Liao",
+	"license": "ISC",
+	"devDependencies": {
+		"@types/node": "^18.11.17",
+		"prettier": "^2.8.1",
+		"vitest": "^0.26.2"
+	}
+}
