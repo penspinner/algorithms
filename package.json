@@ -4,15 +4,16 @@
 	"description": "",
 	"main": "",
 	"scripts": {
+		"bench": "vitest bench",
 		"format": "prettier './**/*.{tsx,ts,json,jsx,js,mjs}' --write",
 		"test": "vitest"
 	},
 	"author": "Steven Liao",
 	"license": "ISC",
 	"devDependencies": {
-		"@types/node": "^18.11.17",
-		"prettier": "^2.8.1",
-		"vite": "^4.0.4",
-		"vitest": "^0.26.2"
+		"@types/node": "^18.13.0",
+		"prettier": "^2.8.3",
+		"vite": "^4.1.1",
+		"vitest": "^0.28.4"
 	}
 }
