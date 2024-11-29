@@ -14,7 +14,7 @@ export const decodeString = (s: string) => {
 			// Keep popping the stack until we find the number of times to repeat.
 			let repeatCount = ''
 			popped = stack.pop()
-			while (popped && !isNaN(+popped)) {
+			while (popped && !Number.isNaN(+popped)) {
 				repeatCount = popped + repeatCount
 				popped = stack.pop()
 			}

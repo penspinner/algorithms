@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { hasCycle, Node } from './has-cycle'
+import { type Node, hasCycle } from './has-cycle'
 
 test('returns true when a linked list has a cycle', () => {
 	const head: Node = {}

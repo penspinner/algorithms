@@ -1,10 +1,10 @@
+import { describe, expect, test } from 'vitest'
 import {
 	getPermutationsArr,
 	getPermutationsStr,
 	getUniquePermutationsArr,
 	getUniquePermutationsStr,
 } from './permutations'
-import { describe, expect, test } from 'vitest'
 
 describe('getPermutationsStr', () => {
 	test('returns all permutations of a string', () => {
@@ -50,7 +50,7 @@ describe('getUniquePermutationsStr', () => {
 	})
 })
 
-test('getPermutationsArr', () => {
+describe('getPermutationsArr', () => {
 	test('returns all permutations of an array', () => {
 		expect(getPermutationsArr([1, 2, 3])).toMatchInlineSnapshot(`
       [

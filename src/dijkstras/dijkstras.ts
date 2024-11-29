@@ -9,16 +9,18 @@ export const dijkstras = (
 ) => {
 	const seenByVertex = new Array(graphEdgesByVertex.length).fill(false)
 	const prevByVertex = new Array(graphEdgesByVertex.length).fill(-1)
-	const distanceByVertex = new Array(graphEdgesByVertex.length).fill(Infinity)
+	const distanceByVertex = new Array(graphEdgesByVertex.length).fill(Number.POSITIVE_INFINITY)
 	distanceByVertex[source] = 0
 
 	const hasUnvisitedVertices = () => {
-		return seenByVertex.some((seen, index) => !seen && distanceByVertex[index] < Infinity)
+		return seenByVertex.some(
+			(seen, index) => !seen && distanceByVertex[index] < Number.POSITIVE_INFINITY,
+		)
 	}
 
 	const getLowestUnvisitedVertex = () => {
 		let lowestUnvisitedVertex = -1
-		let lowestDistance = Infinity
+		let lowestDistance = Number.POSITIVE_INFINITY
 
 		for (let i = 0; i < seenByVertex.length; i++) {
 			if (seenByVertex[i]) {

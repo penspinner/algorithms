@@ -1,7 +1,7 @@
 export const conwaysGameOfLife = (board: number[][]) => {
 	const nextBoard: typeof board = []
 	board.forEach((row, rowIndex) => {
-		const newRow: typeof board[number] = []
+		const newRow: (typeof board)[number] = []
 		row.forEach((column, columnIndex) => {
 			const liveNeighborsCount = getLiveNeighborsCount(board, rowIndex, columnIndex)
 
@@ -39,12 +39,14 @@ const neighborCoordinates = [
 
 const getLiveNeighborsCount = (board: number[][], rowIndex: number, columnIndex: number) => {
 	let liveNeighborsCount = 0
-	neighborCoordinates.forEach(([x, y]) => {
+
+	for (const [x, y] of neighborCoordinates) {
 		const cell = board[rowIndex + y]?.[columnIndex + x]
 
 		if (cell === 1) {
 			liveNeighborsCount++
 		}
-	})
+	}
+
 	return liveNeighborsCount
 }

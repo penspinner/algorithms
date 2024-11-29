@@ -1,7 +1,7 @@
 import { expect, test } from 'vitest'
-import { dijkstras, GraphEdgesByVertex } from './dijkstras'
+import { type GraphEdgesByVertex, dijkstras } from './dijkstras'
 
-export const graphEdges1: GraphEdgesByVertex = []
+const graphEdges1: GraphEdgesByVertex = []
 
 //      (1) --- (4) ---- (5)
 //    /  |       |       /|

@@ -1,5 +1,5 @@
 import { expect, test } from 'vitest'
-import { BinaryNode, breadthFirstSearch, depthFirstSearch } from './tree-search'
+import { type BinaryNode, breadthFirstSearch, depthFirstSearch } from './tree-search'
 
 test('breadth-first search', () => {
 	const node: BinaryNode<number> = {
@@ -37,5 +37,5 @@ test('depth-first search', () => {
 	expect(depthFirstSearch(node, 66)).toBe(true)
 	expect(depthFirstSearch(node, 22)).toBe(true)
 	expect(depthFirstSearch(node, 9999)).toBe(false)
-	expect(depthFirstSearch(undefined, Infinity)).toBe(false)
+	expect(depthFirstSearch(undefined, Number.POSITIVE_INFINITY)).toBe(false)
 })

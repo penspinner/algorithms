@@ -1,6 +1,6 @@
 import { expect, test } from 'vitest'
 import {
-	BinaryNode,
+	type BinaryNode,
 	inOrderTraversal,
 	postOrderTraversal,
 	preOrderTraversal,

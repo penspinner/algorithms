@@ -51,10 +51,13 @@ export const getLongestPalindromeSubstringFast = (s: string) => {
 }
 
 const getLongestPalindromeFrom = (s: string, l: number, r: number) => {
-	while (l >= 0 && r < s.length && s[l] === s[r]) {
-		l--
-		r++
+	let tempL = l
+	let tempR = r
+
+	while (tempL >= 0 && tempR < s.length && s[tempL] === s[tempR]) {
+		tempL--
+		tempR++
 	}
 
-	return s.substring(l + 1, r)
+	return s.substring(tempL + 1, tempR)
 }

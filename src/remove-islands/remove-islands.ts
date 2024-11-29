@@ -49,10 +49,10 @@ export const removeIslands = (matrix: number[][]): number[][] => {
 			[-1, 0],
 		]) {
 			if (isConnectedToLandAtBorder(rowIndex + y, colIndex + x, visitedByCoordinate)) {
-				Object.keys(visitedByCoordinate).forEach((coordinate) => {
+				for (const coordinate of Object.keys(visitedByCoordinate)) {
 					isConnectedToLandAtBorderByCoordinate[coordinate as keyof typeof visitedByCoordinate] =
 						true
-				})
+				}
 				return true
 			}
 		}

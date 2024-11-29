@@ -40,7 +40,7 @@ export const createExpandedDict = (strs: string[]) => {
 			}
 
 			getReplaceCombinations(curr + str[position], position + 1)
-			getReplaceCombinations(curr + '*', position + 1)
+			getReplaceCombinations(`${curr}*`, position + 1)
 		}
 		getReplaceCombinations('', 0)
 
