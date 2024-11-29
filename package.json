@@ -2,18 +2,19 @@
 	"name": "algorithms",
 	"version": "1.0.0",
 	"description": "",
-	"main": "",
 	"scripts": {
 		"bench": "vitest bench",
 		"check": "biome check",
+		"check:ts": "tsc",
 		"test": "vitest"
 	},
 	"author": "Steven Liao",
 	"license": "ISC",
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",
+		"@types/bun": "^1.1.14",
 		"@types/node": "^22.10.1",
-		"vite": "^6.0.1",
+		"typescript": "^5.7.2",
 		"vitest": "^2.1.6"
 	}
 }
