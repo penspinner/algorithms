@@ -1,0 +1,31 @@
+{
+	"$schema": "./node_modules/oxlint/configuration_schema.json",
+	"plugins": ["typescript", "unicorn", "import", "oxc"],
+	"rules": {
+		"no-unused-vars": "error",
+		"no-console": "error",
+		"import/no-default-export": "error",
+		"unicorn/filename-case": [
+			"error",
+			{
+				"cases": {
+					"kebabCase": true
+				}
+			}
+		]
+	},
+	"overrides": [
+		{
+			"files": ["scaffold.ts"],
+			"rules": {
+				"no-console": "off"
+			}
+		},
+		{
+			"files": ["*.test.ts", "*.test.tsx"],
+			"rules": {
+				"typescript/no-non-null-assertion": "off"
+			}
+		}
+	]
+}

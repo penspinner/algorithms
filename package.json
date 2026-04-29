@@ -2,19 +2,22 @@
 	"name": "algorithms",
 	"version": "1.0.0",
 	"description": "",
+	"license": "ISC",
+	"author": "Steven Liao",
 	"scripts": {
 		"bench": "vitest bench",
-		"check": "biome check",
+		"check": "oxlint && oxfmt --check",
 		"check:ts": "tsc",
+		"format": "oxfmt",
+		"lint": "oxlint",
 		"test": "vitest"
 	},
-	"author": "Steven Liao",
-	"license": "ISC",
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.4",
-		"@types/bun": "^1.1.14",
-		"@types/node": "^22.10.1",
-		"typescript": "^5.7.2",
-		"vitest": "^2.1.6"
+		"@types/bun": "^1.3.13",
+		"@types/node": "^25.6.0",
+		"oxfmt": "^0.46.0",
+		"oxlint": "^1.0.0",
+		"typescript": "^6.0.3",
+		"vitest": "^4.1.5"
 	}
 }
